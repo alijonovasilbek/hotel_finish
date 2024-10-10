@@ -1,0 +1,137 @@
+Users:
+    id
+    username
+    email
+    password
+
+Rooms:
+id
+ 1 - rooms prices
+ 2 - rooms type
+ 3 - rooms subtitle
+ 4 - rooms included options
+
+Read more:
+   5 - room description
+   6 - additional description
+   7 - more facilities
+   8 - room services
+
+Commnets:
+        id
+        room_id = foreign key -> rooms
+        user_id = foreign key -> users 
+        1 - sender name
+        2 - sender image
+        3 - sender rate
+        4 - sender message 
+
+Room services:
+    id
+    room_id = foreign key
+    1 - service name
+    2 - service description
+    3 - service icon
+
+
+
+
+Restaurant:
+    Special Offers:
+        id
+        1 - offers title 
+        2 - offers description
+        3 - offers image
+    Menu:
+        id
+        1 - types
+        2 - description 
+    Foods:
+        id
+        food name
+        food description
+        price
+        menu_id = foreign key -> menu.id
+    Gallery section:
+        id
+        images
+
+
+
+
+
+SPA:
+    spa services:
+        id
+        image
+        price
+        spa name
+        spa description
+        spa inclusions_1
+        spa inclusions_2
+        spa inclusions_3
+    spa pricing:
+        id
+        spa status
+        price
+        inclusions_1   
+        inclusions_2   
+        inclusions_3
+    Therapist:
+        id
+        name
+        job
+        image
+        description
+
+
+
+
+Activities: 
+    id
+    name
+    info 1
+    info 2
+    inclusions_1
+    inclusions_2
+    inclusions_3
+    inclusions_4
+    
+Image:
+    id
+    activity_id = foreign key -> Activities.id
+    image
+
+
+
+
+
+Blogs:
+    id
+    user_id = foreign key -> user.id
+    date
+    name
+    blog info
+    image
+    video
+    description
+
+Blogs Tags connection:
+    id
+    blog_id = foreign key -> Blogs.id
+    tag_id = foreign key -> Tag.id
+
+Tag:
+    id
+    name                       
+
+
+
+
+
+
+
+    
+    
+
+

@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Transparent Login Form HTML CSS</title>
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   </head>
+   <body>
+      <div class="bg-img">
+         <div class="content">
+            <header>Conact Us</header>
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+            </form>
+            
+            <div class="contact-info">
+               <p style="color: white; font-size: 20px;">📞 Phone: +123 456 7890</p>
+               <p>📲 <a href="https://t.me/SoHub_routine" target="_blank">Connect on Telegram</a></p>
+            </div>
+
+            
+         </div>
+      </div>
+      <script>
+         const pass_field = document.querySelector('input[name="password"]');
+         const showBtn = document.querySelector('.show');
+         showBtn.addEventListener('click', function(){
+          if(pass_field.type === "password"){
+            pass_field.type = "text";
+            showBtn.textContent = "HIDE";
+            showBtn.style.color = "#3498db";
+          }else{
+            pass_field.type = "password";
+            showBtn.textContent = "SHOW";
+            showBtn.style.color = "#222";
+          }
+         });
+      </script>
+   </body>
+</html>

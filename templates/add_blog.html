@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Room</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+ 
+</head>
+
+<body>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit Blog</button>
+</form>
+
+<a href="{% url 'admin-page' %}"><button>Back to admin page</button></a>
+</body>
+
+</html>

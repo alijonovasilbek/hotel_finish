@@ -1,0 +1,566 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+        
+        <!-- Standard Meta -->
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Site Properties -->
+        <title>Sativa - Hotel &amp; Resort HTML Template</title>
+		<link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+		<link rel="apple-touch-icon-precomposed" href="{%  static 'images/apple-touch-icon.png' %}">
+
+       <!-- Google Fonts -->
+       	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+       	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+
+        <!-- CSS -->
+		<link rel="stylesheet" href="{% static 'css/uikit.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/tiny-date-picker.min.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/media-query.css' %}" />
+
+    </head>
+
+    <body id="impx-body">
+    	
+		<!-- HEADER -->
+		<header id="impx-header">
+			<div>
+				<div class="impx-menu-wrapper style2 resto" data-uk-sticky="top: .impx-slide-container; animation: uk-animation-slide-top">
+
+					<!-- Mobile Nav Start -->
+					<div id="mobile-nav" data-uk-offcanvas="mode: push; overlay: true">
+				        <div class="uk-offcanvas-bar">
+
+				            <ul class="uk-nav uk-nav-default">
+				                <li class="uk-parent">
+				                	<a href="{% url 'homepage' %}">Home</a>
+				                	<ul class="uk-nav-sub">
+				                		<li><a href="{% url 'homepage' %}">Homepage 1</a></li>
+				                		
+				                		
+				                	</ul>
+				                </li>
+				                <li class="uk-parent">
+						        	<a href="{% url 'rooms1' %}" class="uk-navbar-nav-subtitle">Rooms</a>
+						        	<ul class="uk-nav-sub">
+				                		<li><a href="{% url 'rooms1' %}">Rooms Style 1</a></li>
+				                		<li><a href="{% url 'rooms2' %}">Rooms Style 2</a></li>
+				                		<li><a href="{% url 'rooms3' %}">Rooms Style 3</a></li>
+				                		<li><a href="{% url 'room_detail' %}">Room Detail 1</a></li>
+				                		<li><a href="{% url 'room_detail' %}">Room Detail 2</a></li>
+				                	</ul>
+				                </li>
+				                <li class="uk-active"><a href="{% url 'restaurant' %}">Restaurant</a></li>
+				                <li><a href="{% url 'spa' %}">Spa</a></li>
+				                <li><a href="{% url 'activities' %}">Activities</a></li>
+				                <li class="uk-parent">
+				                	<a href="#">Pages</a>
+				                	<ul class="uk-nav-sub">
+					                	<li><a href="{% url 'about' %}">About Us</a></li>
+										<li><a href="{% url 'testimonial' %}">Testimonial</a></li>
+										<li><a href="{% url 'blog' %}">Blog</a></li>
+										
+										<li><a href="{% url 'gallery' %}">Gallery</a></li>
+										<li><a href="{% url 'element' %}">Element</a></li>
+									</ul>
+				                </li>
+				                <li><a href="{% url 'contact' %}">Contact</a></li>
+				            </ul>
+
+				        </div>
+				    </div>
+				    <a href="#mobile-nav" class="uk-hidden@xl uk-hidden@l uk-hidden@m mobile-nav" data-uk-toggle="target: #mobile-nav"><i class="fa fa-bars"></i>Menu</a>
+		            <!-- Mobile Nav End -->
+
+		            <!-- Top Header -->
+					<div class="impx-top-header style2">
+						<div class="uk-container uk-container-expand">
+							
+							<div class="uk-grid">
+								<!-- header phone -->
+								<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s">
+									<div class="impx-top-phone">
+										<p><i class="fa fa-phone"></i> Phone : +62 123456789</p>  
+									</div>
+								</div><!-- header phone end-->
+								<!-- header social media -->
+								<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s">
+									<div class="impx-top-social">
+										<ul>
+											<li><a href="#"><i class="fa fa-facebook-f"></i>Facebook</a></li>
+											<li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+										</ul>
+									</div>
+								</div><!-- header social media end -->
+							</div>
+
+						</div>
+					</div>
+					<!-- Top Header End -->
+
+
+					<div class="uk-container uk-container-expand">
+						<div data-uk-grid>
+
+							<!-- Header Logo -->
+							<div class="uk-width-auto">
+								<div class="impx-logo">
+									<a href="{% url 'homepage' %}"><img src="{% static 'images/logo.png' %}" class="" alt="Logo"></a>
+								</div>
+							</div>
+							<!-- Header Logo End-->
+
+							<!-- Header Navigation -->
+							<div class="uk-width-expand uk-position-relative">								
+								<nav class="uk-navbar-container uk-navbar-transparent uk-visible@s uk-visible@m" data-uk-navbar>
+									<div class="uk-navbar-right impx-navbar-right">
+	        							<ul class="uk-navbar-nav impx-nav style2">
+											<!-- Navigation Items -->
+									    	<li class="uk-parent">
+								    			<a href="{% url 'homepage' %}" class="uk-navbar-nav-subtitle"><div>Home<div class="uk-navbar-subtitle">Welcome</div></div></a>
+									    		<div class="uk-navbar-dropdown">
+	                								<ul class="uk-nav uk-navbar-dropdown-nav">
+														<li><a href="{% url 'homepage' %}">Homepage 1</a></li>
+														
+														
+													</ul>
+												</div>
+									    	</li>
+									    	<li>
+									        	<a href="{% url 'rooms1' %}" class="uk-navbar-nav-subtitle"><div>Rooms<div class="uk-navbar-subtitle">Our Best Suites</div></div></a>
+												<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4 impx-megamenu" data-uk-drop="boundary: .impx-navbar-right; boundary-align: true; pos: bottom-justify;">
+								                    <div class="uk-navbar-dropdown-grid uk-child-width-1-4" data-uk-grid>
+								                        <div>
+								                            <ul class="uk-nav uk-navbar-dropdown-nav">
+								                                <li class="uk-nav-header uk-text-bold">Rooms 1</li>
+								                                <li>
+								                                	<a href="{% url 'rooms1' %}"><img src="{% static 'images/rooms/room-menu-1.jpg' %}" alt=""></a>
+								                                	<p class="uk-margin-small-bottom uk-margin-small-top impx-hidden-m">Rooms 1</p>
+								                                	<a class="uk-button uk-button-default uk-button-small impx-button impx-button-outline aqua small small-border" href="{% url 'rooms1' %}">Visit Page</a>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                        <div>
+								                            <ul class="uk-nav uk-navbar-dropdown-nav">
+								                                <li class="uk-nav-header uk-text-bold">Rooms 2</li>
+								                                <li>
+								                                	<a href="{% url 'rooms2' %}"><img src="{% static 'images/rooms/room-menu-2.jpg' %}" alt=""></a>
+								                                	<p class="uk-margin-small-bottom uk-margin-small-top impx-hidden-m">Rooms 2</p>
+								                                	<a class="uk-button uk-button-default uk-button-small impx-button impx-button-outline aqua small small-border" href="{% url 'rooms2' %}">Visit Page</a>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                        <div>
+								                            <ul class="uk-nav uk-navbar-dropdown-nav">
+								                                <li class="uk-nav-header uk-text-bold">Rooms 3</li>
+								                                <li>
+								                                	<a href="{% url 'rooms3' %}"><img src="{% static 'images/rooms/room-menu-3.jpg' %}" alt=""></a>
+								                                	<p class="uk-margin-small-bottom uk-margin-small-top impx-hidden-m">Rooms 3</p>
+								                                	<a class="uk-button uk-button-default uk-button-small impx-button impx-button-outline aqua small small-border" href="{% url 'rooms3' %}">Visit Page</a>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                        <div>
+								                        	<div>
+								                            	<ul class="uk-nav uk-navbar-dropdown-nav">	
+								                            		<li class="uk-nav-header uk-margin-small-bottom uk-text-bold">Room Detail Page</li>
+								                            		<li>
+							                            				<div class="uk-grid-small" data-uk-grid>
+							                            					<div class="uk-width-auto">
+								                            					<i class="fa fa-check-square-o fa-05x circle impx-text-aqua border-aqua uk-margin-remove uk-visible@m"></i>
+								                            				</div>
+								                            				<div class="uk-width-expand">
+								                            					<p class="uk-margin-remove uk-visible@s impx-hidden-m">Room detail</p>
+								                            					<a href="{% url 'room_detail' %}">Room Detail 1 &raquo;</a>
+								                            				</div>	
+							                            				</div>
+							                            				<div class="uk-grid-small" data-uk-grid>
+							                            					<div class="uk-width-auto">
+								                            					<i class="fa fa-check-square-o fa-05x circle impx-text-aqua border-aqua uk-margin-remove uk-visible@m"></i>
+								                            				</div>
+								                            				<div class="uk-width-expand">
+								                            					<p class="uk-margin-remove uk-visible@s impx-hidden-m">Room detail</p>
+								                            					<a href="{% url 'room_detail' %}" class="uk-margin-small-top">Room Detail 2 &raquo;</a>
+								                            				</div>	
+							                            				</div>
+								                            				
+								                            		</li>
+								                            	</ul>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+									        </li>
+									        <li class="uk-active"><a href="{% url 'restaurant' %}"><div>Restaurant<div class="uk-navbar-subtitle">In-house Restaurant</div></div></a></li>
+											<li><a href="{% url 'spa' %}"><div>Spa<div class="uk-navbar-subtitle">Our Spa Service</div></div></a></li>
+											<li><a href="{% url 'activities' %}" class="uk-navbar-nav-subtitle"><div>Activities<div class="uk-navbar-subtitle">Our Facilities</div></div></a></li>
+											<li class="uk-parent">
+								    			<a href="#" class="uk-navbar-nav-subtitle"><div>Pages<div class="uk-navbar-subtitle">the Other Pages</div></div></a>
+									    		<div class="uk-navbar-dropdown">
+	                								<ul class="uk-nav uk-navbar-dropdown-nav">
+														<li><a href="{% url 'about' %}">About Us</a></li>
+														<li><a href="{% url 'testimonial' %}">Testimonial</a></li>
+														<li><a href="{% url 'blog' %}">Blog</a></li>
+														
+														<li><a href="{% url 'gallery' %}">Gallery</a></li>
+														<li><a href="{% url 'element' %}">Element</a></li>
+													</ul>
+												</div>
+									    	</li>
+									        <li><a href="{% url 'contact' %}" class="uk-navbar-nav-subtitle"><div>Contact<div class="uk-navbar-subtitle">Get in Touch</div></div></a></li>
+									    </ul>
+									    <!-- Navigation Items End -->
+									</div>
+								</nav>
+							</div>
+							<!-- Header Navigation End -->
+
+							<!-- Promo Ribbon -->
+							<div class="uk-width-auto uk-position-relative">
+								<div class="ribbon">
+								  <i><span><s></s>30% <span>Off!</span><s></s></span></i>
+								</div>
+							</div>
+							<!-- Promo Ribbon End -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<!-- HEADER END -->
+
+		<!-- HERO IMAGE -->
+		<div class="impx-slide-container style1 resto">
+			<div class="impx-slideshow-fw">
+				<div class="impx-hero-resto uk-position-relative  uk-background-fixed uk-background-center-center uk-height-1-1">
+					<div class="impx-overlay dark"></div>
+			    	<div class="uk-container">
+			    		<div class="uk-grid uk-flex uk-flex-center uk-flex-middle">
+			    			<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-1@m  uk-width-1-1@s uk-position-center uk-margin-large-top">
+		    					<div class="impx-slide-fw-caption resto-caption uk-position-relative uk-position-z-index uk-text-center uk-light">
+		    						<!-- intro -->
+						    		<h1 class="impx-text-shadow">Sativa Restaurant</h1>
+						    		<p class="uk-margin-remove impx-text-shadow uk-text-lead">This is our tast menu and foods page</p>
+						    		<div class="uk-margin">
+				    					<i class="fa fa-coffee impx-slide-icon impx-text-white"></i>
+				    					<i class="fa fa-cutlery impx-slide-icon impx-text-white"></i>
+				    					<i class="fa fa-glass impx-slide-icon impx-text-white"></i>
+			    					</div>
+			    					<!-- intro end -->
+					    		</div>
+				    		</div>
+			    		</div>
+		    		</div>
+				</div>
+			</div>
+		</div>
+		<!-- HERO IMAGE END -->
+
+		<!-- FEATURES -->
+        <div class="uk-padding uk-padding-remove-horizontal uk-padding-remove-bottom bg-color-gray  pattern-1 impx-resto-badge">
+            <div class="uk-container">
+                <div class="uk-grid">
+                    <!-- Image -->
+                    <div class="uk-width-2-5@xl uk-width-2-5@l uk-width-2-5@m uk-width-1-1@s uk-vertical-align-bottom uk-position-relative uk-position-z-index impx-negative-top xxlarge">
+                        <img src="{% static 'images/chef-woman.png' %}" alt="Chef Stand" class="img-resto-intro uk-align-center"/>
+                    </div>
+                    <!-- Image End -->
+                    <!-- Contact Info -->
+                    <div class="uk-width-3-5@xl uk-width-3-5@l uk-width-3-5@m uk-width-1-1@s impx-intro resto">
+                        <h3>Make an Appointment</h3>
+                        <p class="impx-text-large uk-margin-bottom">allows guests to easily schedule services or consultations, ensuring a personalized experience tailored to their needs during their stay.</p>                        
+                        <ul class="impx-list-inline impx-hours">
+                            <li><i class="fa fa-check impx-text-aqua"></i><strong class="impx-text-aqua">Breakfast</strong> 6.00 AM  - 10.00 AM</li>
+                            <li><i class="fa fa-check impx-text-aqua"></i><strong class="impx-text-aqua">Lunch</strong> 10.00 AM - 2.00 PM</li>
+                            <li><i class="fa fa-check impx-text-aqua"></i><strong class="impx-text-aqua">Dinner</strong> 4.00 PM - 12.00 PM</li>
+                        </ul>
+                    </div>
+                    <!-- Contact Info End -->                    
+                </div>
+            </div>
+        </div>
+        <!-- FEATURES END -->
+
+        <!-- HIGHLIGHT -->
+        <div class="uk-padding uk-margin-bottom resto-feat uk-padding-remove-horizontal">
+			<div class="uk-container">
+				<div data-uk-grid>
+
+    				<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-1-1@m uk-width-1-1@s uk-margin-top">
+    					<div class="impx-intro resto margin-medium"><!-- intro -->
+    						<h3>Get Special Offers Now!</h3>
+    						<p class="uk-margin-medium-bottom impx-text-large">We have gathered our best food in one offer only for you, do not miss the change and get your best special offer so</p>
+    					</div><!-- intro end -->
+
+    					<!-- highlight items -->
+                        <ul class="uk-child-width-1-2@xl uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-2@s" data-uk-grid>
+							{% for offer in offers %}
+                            <li class="resto-feat-item"><!-- highlight item #1 -->
+                            	<div data-uk-grid>
+	                                <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+	                                	<div class="uk-position-relative">
+		                                    <img src="{{ offer.image.url }}" alt="resort" class="uk-border-circle">
+		                                    <div class="impx-overlay light overlay-outline padding-medium"></div>
+	                                    </div>
+	                                </div>
+	                                <div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-1-1@s">
+	                                     <h5 class="uk-margin-remove-bottom">{{ offer.title }}</h5>
+	                                    <p class="uk-margin-small-top uk-margin-remove-bottom">{{ offer.description }}</p>
+	                                </div>
+	                            </div>
+                            </li><!-- highlight item #1 end -->
+							{% endfor %}
+                           
+                        </ul>
+                        <!-- highlight items end -->
+                    </div>
+
+    				 <!-- Intro Text -->
+                    <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-1@m">
+                    	<div class="impx-img-stacked uk-padding-remove-horizontal">
+                        	<img src="{% static 'images/gallery/resto-gal-7.jpg' %}" alt="" class="">
+                        	<img src="{% static 'images/gallery/resto-gal-2.jpg' %}" alt="" class="">
+                    	</div>
+                    </div>
+                    <!-- Intro Text End -->
+
+				</div>
+			</div>
+		</div>
+		<!-- HIGHLIGHT -->
+
+		<!-- MENU BOOK -->
+		<div id="impx-menu-carousel" class="impx-menu-carousel uk-padding uk-position-relative uk-padding-remove-horizontal mobile-rmv-pad vert uk-background-fixed uk-background-center-center uk-height-1-1">
+			<div class="impx-overlay dark"></div>
+			<div class="uk-container uk-container-large">
+
+				<!-- Intro -->
+				<div class="uk-grid uk-light">
+					<div class="uk-width-xlarge-2-3 uk-width-large-2-3 uk-width-medium-3-4  uk-width-xlarge-1-1 uk-container-center impx-margin-top">
+						<div class="impx-intro intro-light uk-text-center uk-contrast uk-position-relative uk-position-z-index" >
+    						<h2 class="uk-margin-remove">Find Our Best Tasty Menu</h2>
+    					</div>
+					</div>
+				</div>
+				<!-- Intro End -->
+
+				<!-- Menu groups -->
+				<div class="uk-grid uk-flex uk-flex-center">
+					<div class="uk-width-1-1">
+
+						<div class="impx-menu-cat-group impx-menu-cat-group-carousel">
+							<div class="uk-position-relative">
+								<!-- Menu group #1 -->
+								<ul class="uk-grid uk-child-width-1-3@xl uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1-1@s uk-grid-collapse impx-menu-page-2col">
+									{% for menu in menu_all %}
+			    					<li class="impx-menu-cat-group-wrapper">
+			    						<div class="impx-menu-cat-group-outline"></div>
+			    						<div class="impx-menu-page-group impx-menu-page-3col">
+			    							<div class="uk-grid uk-grid-medium uk-margin-medium-bottom impx-margin-bottom">
+			    								<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-4-5@s impx-menu-page-group-title">
+			    									<h4 class="uk-margin-remove">{{ menu.types }}</h4>
+			    									<p>{{ menu.description }}</p>
+			    								</div>
+                                                <div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-5@s uk-container-center">
+                                                    <img src="{{ menu.image.url }}" alt="Menu Image" class="uk-border-circle uk-align-center" />
+                                                </div>
+			    							</div>
+				    						<ul class="impx-menu-page menu-list">
+												{% for food in foods %}
+												{% if food.menu.id == menu.id %}
+												<li>
+													<div class="impx-menu-page-item">
+						    							<div class="impx-menu-page-content">
+						  									<h5>{{ food.name}}</h5>
+						  									<div class="impx-menu-page-price">
+						  										<h5>${{ food.price }}</h5>
+						  									</div>
+						  									<p>{{ food.description }}</p>
+						  								</div>
+								    				</div>
+								    			</li>
+												{% endif %}
+								    			{% endfor%}
+							    			</ul>
+						    			</div>
+			    					</li>
+			    					<!-- Menu group #1 end -->
+									{% endfor %}
+
+			    					
+								</ul>
+								<!-- Menu Groups End -->
+							</div>
+						</div>
+						<!-- Menu Carousel Group End -->
+					</div>
+				</div>
+				<!-- Menu Carousel End -->
+    		</div>
+		</div>
+		<!-- MENU BOOK -->
+		
+		<!-- GALLERY -->
+		<div class="uk-padding uk-margin-medium-bottom uk-padding-remove-horizontal">
+            <div class="uk-container">
+               <div class="uk-flex-center" data-uk-grid>
+                    <div class="uk-width-2-3@xl uk-width-2-3@l uk-width-1-1@m uk-text-center uk-margin-small-bottom"><!-- gallery intro -->
+                        <h2 class="uk-margin-remove-bottom">Our Gallery</h2>
+                        <p class="impx-text-large uk-margin-remove-bottom uk-margin-small-top impx-margin-bottom-small"> Showcases stunning images of our hotel, amenities, and surrounding attractions, providing a visual glimpse into the exceptional experiences that await our guests.</p>
+                    </div><!-- gallery intro end -->
+                </div>
+
+                <!-- gallery items -->
+           		<div class="uk-child-width-1-4@xl uk-child-width-1-4@l uk-child-width-1-4@m uk-child-width-1-3@s uk-grid-medium impx-margin-top-small" data-uk-grid="masonry : true" data-uk-lightbox>
+                    <div class="grid-item uk-margin-bottom"><!-- gallery item #1 -->
+                    	<a class="uk-inline-clip uk-transition-toggle" href="images/gallery/resto-gal-1.jpg" data-caption="Caption 1">
+	                        <img src="{% static 'images/gallery/resto-gal-1.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+                                <h5>Salats</h5>
+                                <p>features a variety of fresh and flavorful salad options, made with the finest ingredients to provide a healthy and delicious addition to your dining experience.</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #1  end -->
+                    <div class="grid-item" data-uk-lightbox><!-- gallery item #2 -->
+                        <a class="uk-inline-clip uk-transition-toggle" href="images/intro-img-1.jpg" data-caption="Caption 2">
+	                        <img src="{% static 'images/intro-img-1.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+								<h5>Breakfast</h5>
+                                <p>offers a delightful selection of hearty and nutritious options to start your day, including freshly made pastries, eggs, fruits, and beverages to energize you for the day ahead.</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #2 end -->
+                    <div class="grid-item" data-uk-lightbox><!-- gallery item #3 -->
+                        <a class="uk-inline-clip uk-transition-toggle" href="images/gallery/resto-gal-5.jpg"  data-caption="Caption 3">
+	                        <img src="{% static 'images/gallery/resto-gal-5.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+								<h5>Cheesecake</h5>
+                                <p>rich and creamy dessert made with a velvety blend of cream cheese, sugar, and a buttery crust, perfect for indulging your sweet tooth. Enjoy our delightful variety of flavors, each crafted to satisfy your cravings.</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #3 end -->
+                    <div class="grid-item" data-uk-lightbox><!-- gallery item #4 -->
+                        <a class="uk-inline-clip uk-transition-toggle" href="images/gallery/resto-gal-4.jpg"  data-caption="Caption 4">
+	                        <img src="{% static 'images/gallery/resto-gal-4.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+								<h5>Wine</h5>
+                                <p>offers a carefully curated selection of exquisite wines from renowned regions, perfect for pairing with your meal or enjoying on its own. Experience the rich flavors and aromas that elevate your dining experience.								</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #4 end -->
+                    <div class="grid-item" data-uk-lightbox><!-- gallery item #5 -->
+                        <a class="uk-inline-clip uk-transition-toggle" href="images/gallery/resto-gal-7.jpg"  data-caption="Caption 5">
+	                        <img src="{% static 'images/gallery/resto-gal-7.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+								<h5>Sandwich</h5>
+                                <p>features a variety of deliciously crafted options, made with fresh ingredients and flavorful fillings, perfect for a quick bite or a leisurely meal. Enjoy our classic and gourmet selections to satisfy your cravings.</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #5 end -->
+                    <div class="grid-item" data-uk-lightbox><!-- gallery item #6 -->
+                        <a class="uk-inline-clip uk-transition-toggle" href="images/intro-img-3.jpg"  data-caption="Caption 6">
+	                        <img src="{% static 'images/intro-img-3.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+								<h5>Potatoes in Cream Sauce</h5>
+                                <p>features tender potatoes smothered in a rich and creamy sauce, creating a comforting dish that is both savory and indulgent. Perfect as a side or a delightful main course.								</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #6 end -->
+                    <div class="grid-item" data-uk-lightbox><!-- gallery item #7 -->
+                        <a class="uk-inline-clip uk-transition-toggle" href="images/gallery/resto-gal-2.jpg" data-caption="Caption 7">
+	                        <img src="{% static 'images/gallery/resto-gal-2.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+								<h5>Peperetto</h5>
+                                <p>lavorful dish featuring roasted bell peppers, often combined with herbs and spices, offering a vibrant and delicious option that adds a burst of color and taste to your meal. Perfect as a side or a light appetizer!</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #7 -->
+                    <div class="grid-item" data-uk-lightbox>
+                        <a class="uk-inline-clip uk-transition-toggle" href="images/gallery/resto-gal-8.jpg" data-caption="Caption 8">
+	                        <img src="{% static 'images/gallery/resto-gal-8.jpg' %}" alt="">
+	                        <div class="uk-transition-fade uk-position-cover uk-overlay uk-overlay-primary">
+								<h5>Crispy Chicken</h5>
+                                <p>features tender, juicy chicken coated in a perfectly seasoned, crunchy batter, delivering a satisfying crunch in every bite. Enjoy it as a standalone dish or paired with your favorite sides for a hearty meal.</p>
+	                        </div>
+	                    </a>
+                    </div><!-- gallery item #7 end -->
+                </div>
+                <!-- gallery items end -->
+            </div>
+        </div>
+        <!-- GALLERY END -->
+
+        <!-- CTA -->
+        <div class="impx-resto-content bg-color-aqua pattern-1">
+            <div class="uk-container">
+            	<div data-uk-grid>
+	            	<div class="uk-width-expand@xl uk-width-expand@l uk-width-expand@m uk-width-1-1@s">
+	            		<div class="impx-badge-content left uk-light uk-margin-medium-top uk-text-right">
+	                        <h4 class="uk-margin-small-bottom">The best chefs in the world</h4>
+	                        <p class="impx-text-large uk-margin-remove uk-visible@s">At Sativa, we are proud to have some of the best chefs in the world. Their passion and expertise shine to deliver unforgettable culinary experiences.</p>
+	                    </div>
+	            	</div>
+	            	<div class="uk-width-1-5@xl uk-width-1-5@l uk-width-1-4@m uk-width-1-1@s">
+	            		<div class=" impx-resto-img impx-negative-top tiny">
+	                        <img src="{% static 'images/chef.jpg' %}" alt="resort" class="uk-border-circle impx-outline-border transparent large">
+	                    </div>
+	            	</div>
+	            	<div class="uk-width-expand@xl uk-width-expand@l uk-width-expand@m uk-width-1-1@s">
+	            		<div class="impx-badge-content right uk-light uk-margin-medium-top">
+	                        <h4 class="uk-margin-small-bottom">Service</h4>
+	                        <p class="impx-text-large uk-margin-remove uk-visible@s">At Sativa, we pride ourselves on providing exceptional service. Our dedicated team goes above and beyond to ensure every guest feels valued and cared for.</p>
+	                    </div>
+	            	</div>
+            	</div>
+            </div>
+        </div>
+        <!-- CTA END -->
+
+		<!-- FOOTER -->
+		<footer id="impx-footer" class="uk-padding uk-padding-remove-bottom uk-padding-remove-horizontal">
+			<div class="uk-container">
+				<div class="uk-flex uk-flex-center data-uk-grid">
+					<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-2-3@m">
+						<div class="impx-footer-logo uk-align-center uk-text-center">
+							<!-- Footer Logo -->
+							<img src="{% static 'images/logo.png' %}" alt="" class="">
+							<!-- Footer Note -->
+							<p class="uk-margin-bottom">Your comfort and satisfaction are our top priorities. We strive to create an unforgettable experience for every guest, ensuring that your stay is both enjoyable and relaxing. Thank you for choosing us!</p>							
+							<!-- Site Copyright -->
+							<p class="impx-copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Scroll to Top -->
+			<a href="#top" class="to-top fa fa-long-arrow-up" data-uk-scroll></a>
+			<!-- Scroll to Top End -->
+		</footer>
+		<!-- FOOTER END -->
+
+    	<!-- Javascript -->
+		<script src="{% static 'js/jquery.js' %}"></script>
+		{#<script src="{% static 'js/main.js' %}"></script>#}
+		<script src="{% static 'js/uikit.min.js' %}"></script>
+		<script src="{% static 'js/uikit-icons.min.js' %}"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBGb3xrNtz335X4G2KfoOXb-XuIyHAzlVo"></script>
+		<script src="{% static 'js/jquery.gmap.min.js' %}"></script>
+		<script src="{% static 'js/tiny-date-picker.min.js' %}"></script>
+		<script src="{% static 'js/jquery.parallax.min.js' %}"></script>
+		<script src="{% static 'js/date-config.js' %}"></script>
+		<script src="{% static 'js/template-config.js' %}"></script>
+    </body>
+
+
+</html>

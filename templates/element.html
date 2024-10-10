@@ -1,0 +1,702 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+        
+        <!-- Standard Meta -->
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Site Properties -->
+        <title>Elements - Sativa</title>
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    	<link rel="apple-touch-icon-precomposed" href="{%  static 'images/apple-touch-icon.png' %}">
+
+        <!-- Google Fonts -->
+       	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+		
+        <!-- CSS -->
+		<link rel="stylesheet" href="{% static 'css/uikit.min.css' %}" />
+    	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" />
+    	<link rel="stylesheet" href="{% static 'css/tiny-date-picker.min.css' %}" />
+    	<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    	<link rel="stylesheet" href="{% static 'css/media-query.css' %}" />
+    </head>
+
+    <body class="impx-body" id="top">
+    	
+		<!-- HEADER -->
+		<header id="impx-header">
+			<div>
+				<div class="impx-menu-wrapper style2" data-uk-sticky="top: .impx-page-heading; animation: uk-animation-slide-top">
+
+					<!-- Mobile Nav Start -->
+					<div id="mobile-nav" data-uk-offcanvas="mode: push; overlay: true">
+				        <div class="uk-offcanvas-bar">
+
+				            <ul class="uk-nav uk-nav-default">
+				                <li class="uk-parent">
+				                	<a href="{% url 'homepage' %}">Home</a>
+				                	<ul class="uk-nav-sub">
+				                		<li><a href="{% url 'homepage' %}">Homepage 1</a></li>
+				                		
+				                		
+				                	</ul>
+				                </li>
+				                <li class="uk-parent">
+						        	<a href="{% url 'rooms1' %}" class="uk-navbar-nav-subtitle">Rooms</a>
+						        	<ul class="uk-nav-sub">
+				                		<li><a href="{% url 'rooms1' %}">Rooms Style 1</a></li>
+				                		<li><a href="{% url 'rooms2' %}">Rooms Style 2</a></li>
+				                		<li><a href="{% url 'rooms3' %}">Rooms Style 3</a></li>
+				                		<li><a href="{% url 'room_detail' %}">Room Detail 1</a></li>
+				                		<li><a href="{% url 'room_detail' %}">Room Detail 2</a></li>
+				                	</ul>
+				                </li>
+				                <li><a href="{% url 'restaurant' %}">Restaurant</a></li>
+				                <li><a href="{% url 'spa' %}">Spa</a></li>
+				                <li><a href="{% url 'activities' %}">Activities</a></li>
+				                <li class="uk-parent uk-active">
+				                	<a href="#">Pages</a>
+				                	<ul class="uk-nav-sub">
+					                	<li><a href="{% url 'about' %}">About Us</a></li>
+										<li><a href="{% url 'testimonial' %}">Testimonial</a></li>
+										<li><a href="{% url 'blog' %}">Blog</a></li>
+										
+										<li><a href="{% url 'gallery' %}">Gallery</a></li>
+										<li><a href="{% url 'element' %}">Element</a></li>
+									</ul>
+				                </li>
+				                <li><a href="{% url 'contact' %}">Contact</a></li>
+				            </ul>
+
+				        </div>
+				    </div>
+				    <a href="#mobile-nav" class="uk-hidden@xl uk-hidden@l uk-hidden@m mobile-nav" data-uk-toggle="target: #mobile-nav"><i class="fa fa-bars"></i>Menu</a>
+		            <!-- Mobile Nav End -->
+
+		            <!-- Top Header -->
+					<div class="impx-top-header style2">
+						<div class="uk-container uk-container-expand">							
+							<div class="uk-grid">
+								<!-- header phone -->
+								<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s">
+									<div class="impx-top-phone">
+										<p><i class="fa fa-phone"></i> Phone : +62 123456789</p>  
+									</div>
+								</div><!-- header phone end-->
+								<!-- header social media -->
+								<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s">
+									<div class="impx-top-social">
+										<ul>
+											<li><a href="#"><i class="fa fa-facebook-f"></i>Facebook</a></li>
+											<li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+										</ul>
+									</div>
+								</div><!-- header social media end -->
+							</div>
+						</div>
+					</div>
+					<!-- Top Header End -->
+
+					<div class="uk-container uk-container-expand">
+						<div data-uk-grid>
+
+							<!-- Header Logo -->
+							<div class="uk-width-auto">
+								<div class="impx-logo">
+									<a href="{% url 'homepage' %}"><img src="{% static 'images/logo.png' %}" class="" alt="Logo"></a>
+								</div>
+							</div>
+							<!-- Header Logo End-->
+
+							<!-- Header Navigation -->
+							<div class="uk-width-expand uk-position-relative">								
+								<nav class="uk-navbar-container uk-navbar-transparent uk-visible@s uk-visible@m" data-uk-navbar>
+									<div class="uk-navbar-right impx-navbar-right">
+
+	        							<ul class="uk-navbar-nav impx-nav style2">
+											<!-- Navigation Items -->
+									    	<li class="uk-parent">
+								    			<a href="{% url 'homepage' %}" class="uk-navbar-nav-subtitle"><div>Home<div class="uk-navbar-subtitle">Welcome</div></div></a>
+									    		<div class="uk-navbar-dropdown">
+	                								<ul class="uk-nav uk-navbar-dropdown-nav">
+														<li><a href="{% url 'homepage' %}">Homepage 1</a></li>
+														
+														
+													</ul>
+												</div>
+									    	</li>
+									    	<li>
+									        	<a href="{% url 'rooms1' %}" class="uk-navbar-nav-subtitle"><div>Rooms<div class="uk-navbar-subtitle">Our Best Suites</div></div></a>
+												<div class="uk-navbar-dropdown uk-navbar-dropdown-width-4 impx-megamenu" data-uk-drop="boundary: .impx-navbar-right; boundary-align: true; pos: bottom-justify;">
+								                    <div class="uk-navbar-dropdown-grid uk-child-width-1-4" data-uk-grid>
+								                        <div>
+								                            <ul class="uk-nav uk-navbar-dropdown-nav">
+								                                <li class="uk-nav-header uk-text-bold">Rooms Page Style 1</li>
+								                                <li>
+								                                	<a href="{% url 'rooms1' %}"><img src="{% static 'images/rooms/room-menu-1.jpg' %}" alt=""></a>
+								                                	<p class="uk-margin-small-bottom uk-margin-small-top impx-hidden-m">emper enim ita adsumit aliquid, quae dederit non</p>
+								                                	<a class="uk-button uk-button-default uk-button-small impx-button impx-button-outline aqua small small-border" href="{% url 'rooms1' %}">Visit Page</a>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                        <div>
+								                            <ul class="uk-nav uk-navbar-dropdown-nav">
+								                                <li class="uk-nav-header uk-text-bold">Rooms Page Style 2</li>
+								                                <li>
+								                                	<a href="{% url 'rooms2' %}"><img src="{% static 'images/rooms/room-menu-2.jpg' %}" alt=""></a>
+								                                	<p class="uk-margin-small-bottom uk-margin-small-top impx-hidden-m">emper enim ita adsumit aliquid, quae dederit non</p>
+								                                	<a class="uk-button uk-button-default uk-button-small impx-button impx-button-outline aqua small small-border" href="{% url 'rooms2' %}">Visit Page</a>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                        <div>
+								                            <ul class="uk-nav uk-navbar-dropdown-nav">
+								                                <li class="uk-nav-header uk-text-bold">Rooms Page Style 3</li>
+								                                <li>
+								                                	<a href="{% url 'rooms3' %}"><img src="{% static 'images/rooms/room-menu-3.jpg' %}" alt=""></a>
+								                                	<p class="uk-margin-small-bottom uk-margin-small-top impx-hidden-m">emper enim ita adsumit aliquid, quae dederit non</p>
+								                                	<a class="uk-button uk-button-default uk-button-small impx-button impx-button-outline aqua small small-border" href="{% url 'rooms3' %}">Visit Page</a>
+								                                </li>
+								                            </ul>
+								                        </div>
+								                        <div>
+								                        	<div>
+								                            	<ul class="uk-nav uk-navbar-dropdown-nav">	
+								                            		<li class="uk-nav-header uk-margin-small-bottom uk-text-bold">Room Detail Page</li>
+								                            		<li>
+							                            				<div class="uk-grid-small" data-uk-grid>
+							                            					<div class="uk-width-auto">
+								                            					<i class="fa fa-check-square-o fa-05x circle impx-text-aqua border-aqua uk-margin-remove uk-visible@m"></i>
+								                            				</div>
+								                            				<div class="uk-width-expand">
+								                            					<p class="uk-margin-remove uk-visible@s impx-hidden-m">Sin tantum modo ad indicia veteris</p>
+								                            					<a href="{% url 'room_detail' %}">Room Detail 1 &raquo;</a>
+								                            				</div>	
+							                            				</div>
+							                            				<div class="uk-grid-small" data-uk-grid>
+							                            					<div class="uk-width-auto">
+								                            					<i class="fa fa-check-square-o fa-05x circle impx-text-aqua border-aqua uk-margin-remove uk-visible@m"></i>
+								                            				</div>
+								                            				<div class="uk-width-expand">
+								                            					<p class="uk-margin-remove uk-visible@s impx-hidden-m">Sin tantum modo ad indicia veteris</p>
+								                            					<a href="{% url 'room_detail' %}" class="uk-margin-small-top">Room Detail 2 &raquo;</a>
+								                            				</div>	
+							                            				</div>
+								                            				
+								                            		</li>
+								                            	</ul>
+								                            </div>
+								                        </div>
+								                    </div>
+								                </div>
+									        </li>
+									        <li><a href="{% url 'restaurant' %}"><div>Restaurant<div class="uk-navbar-subtitle">In-house Restaurant</div></div></a></li>
+											<li><a href="{% url 'spa' %}"><div>Spa<div class="uk-navbar-subtitle">Our Spa Service</div></div></a></li>
+											<li><a href="{% url 'activities' %}" class="uk-navbar-nav-subtitle"><div>Activities<div class="uk-navbar-subtitle">Our Facilities</div></div></a></li>
+											<li class="uk-parent uk-active">
+								    			<a href="#" class="uk-navbar-nav-subtitle"><div>Pages<div class="uk-navbar-subtitle">the Other Pages</div></div></a>
+									    		<div class="uk-navbar-dropdown">
+	                								<ul class="uk-nav uk-navbar-dropdown-nav">
+														<li><a href="{% url 'about' %}">About Us</a></li>
+														<li><a href="{% url 'testimonial' %}">Testimonial</a></li>
+														<li><a href="{% url 'blog' %}">Blog</a></li>
+														
+														<li><a href="{% url 'gallery' %}">Gallery</a></li>
+														<li><a href="{% url 'element' %}">Element</a></li>
+													</ul>
+												</div>
+									    	</li>
+									        <li><a href="{% url 'contact' %}" class="uk-navbar-nav-subtitle"><div>Contact<div class="uk-navbar-subtitle">Get in Touch</div></div></a></li>
+									    </ul>
+									    <!-- Navigation Items End -->
+									</div>
+								</nav>
+							</div>
+							<!-- Header Navigation End -->
+
+							<!-- Promo Ribbon -->
+							<div class="uk-width-auto uk-position-relative">
+								<div class="ribbon">
+								  <i><span><s></s>30% <span>Off!</span><s></s></span></i>
+								</div>
+							</div>
+							<!-- Promo Ribbon End -->
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<!-- HEADER END -->
+
+		<!-- PAGE HEADING -->
+		<div class="impx-page-heading uk-position-relative about">
+			<div class="impx-overlay dark"></div>
+			<div class="uk-container">
+				<div class="uk-width-1-1">
+					<div class="uk-flex uk-flex-left">
+						<div class="uk-light uk-position-relative uk-text-left page-title">
+							<h1 class="uk-margin-remove">HTML</h1><!-- page title -->
+							<p class="impx-text-large uk-margin-remove">Elements</p><!-- page subtitle -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- PAGE HEADING END -->
+
+
+		<!-- ELEMENTS -->
+		<div class="uk-padding">
+			<div class="uk-container">
+
+				<div class="uk-container-center uk-margin-bottom" data-uk-grid>    					
+					<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s">
+						<h4 class="uk-heading-line uk-heading-bullet "><span>Heading</span></h4>
+						<h1>H1.Heading 1</h1>
+                        <h2>H2.Heading 2</h2>
+                        <h3>H3.Heading 3</h3>
+                        <h4>H4.Heading 4</h4>
+                        <h5>H5.Heading 5</h5>
+                        <h6>H6.Heading 6</h6>
+		    		</div>
+		    		<div class="uk-width-2-3@xl uk-width-2-3@l uk-width-2-3@m uk-width-2-3@s">
+						<h4 class="uk-heading-line uk-heading-bullet "><span>Heading Style</span></h4>
+						<h1 class="uk-heading-hero uk-margin-remove">Hero</h1>
+						<h4 class="uk-heading-divider">Heading Divider</h4>
+						<h4 class="uk-heading-bullet">Heading Bullet</h4>
+						<h4 class="uk-heading-line"><span>Heading Line Left</span></h4>
+						<h4 class="uk-heading-line uk-text-center"><span>Heading Line Center</span></h4>
+						<h4 class="uk-heading-line uk-text-right"><span>Heading Line Right</span></h4>
+		    		</div>
+				</div>
+
+				<div data-uk-grid>
+					<div class="uk-width-1-1 uk-container-center  uk-margin-bottom">
+						<h4 class="uk-heading-line uk-heading-bullet "><span>Button</span></h4>
+						<div class="uk-child-width-1-3@xl uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1-3@s " data-uk-grid>
+    						<!-- Button Style -->
+		    				<div>
+		    					<h6>Button Style</h6>
+		    					<a href="#" class="uk-button impx-button aqua uk-margin-small-bottom">Color Square</a>
+		    					<a href="#" class="uk-button impx-button impx-button-outline red uk-margin-small-bottom">Border</a>
+		    					<a href="#" class="uk-button impx-button impx-button-outline impx-button-rounded srounded yellow uk-margin-small-bottom">Border Rounded</a>
+		    					<a href="#" class="uk-button impx-button impx-button-rounded green uk-margin-small-bottom">Rounded</a>
+		    				</div>
+
+		    				<!-- Button Size -->
+		    				<div>
+		    					<h6>Button Size</h6>
+		    					<a href="#" class="uk-button impx-button mini aqua uk-margin-small-bottom">Mini</a>
+		    					<a href="#" class="uk-button impx-button small red uk-margin-small-bottom">Small</a>
+		    					<a href="#" class="uk-button impx-button medium green uk-margin-small-bottom">Medium</a>
+		    					<a href="#" class="uk-button impx-button yellow uk-margin-small-bottom">Default</a>
+		    					<a href="#" class="uk-button impx-button large blue-sky uk-margin-small-bottom">Large</a>
+		    					<a href="#" class="uk-button impx-button xlarge purple uk-margin-small-bottom">Extra large</a>
+		    					<a href="#" class="uk-button impx-button xwide aqua">Extra wide</a>
+		    				</div>
+
+		    				<!-- Button Colour -->
+		    				<div>
+		    					<h6>Button Colour</h6>
+		    					<a href="#" class="uk-button impx-button red uk-margin-small-bottom">Red</a>
+		    					<a href="#" class="uk-button impx-button aqua uk-margin-small-bottom">Aqua</a>
+		    					<a href="#" class="uk-button impx-button gold uk-margin-small-bottom">Gold</a>
+		    					<a href="#" class="uk-button impx-button blue-grey uk-margin-small-bottom">Blue Grey</a>
+		    					<a href="#" class="uk-button impx-button purple uk-margin-small-bottom">Purple</a>
+		    					<a href="#" class="uk-button impx-button yellow uk-margin-small-bottom">Yellow</a>
+		    					<a href="#" class="uk-button impx-button blue-sky uk-margin-small-bottom">Blue Sky</a>
+		    					<a href="#" class="uk-button impx-button green uk-margin-small-bottom">Green</a>
+		    				</div>
+		    			</div>
+
+    				</div>
+				</div>
+
+				<div class="uk-grid">
+					<div class="uk-width-1-1 uk-container-center  uk-margin-bottom">
+					    <h4 class="uk-heading-line uk-heading-bullet"><span>List Style</span></h4>
+                    </div>
+
+                    <!-- No Style -->
+                    <div class="uk-child-width-1-4@xl uk-child-width-1-4@l uk-child-width-1-4@m uk-child-width-1-4@s" data-uk-grid>
+	    				<div>
+	    					<h6>No Style</h6>
+	    					<ul class="uk-list impx-list">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ul>
+	    				</div>
+
+	                    <!-- Ordered List -->
+	    				<div>
+	    					<h6>Ordered List</h6>
+	    					<ol class="impx-list">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ol>
+	    				</div>
+	    				
+	    				<!-- Bullet List -->
+	    				<div>
+	    					<h6>Bullet List</h6>
+	    					<ul class="impx-list">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ul>
+	    				</div>
+
+	    				<!-- Square List -->
+	    				<div>
+	    					<h6>Square List</h6>
+	    					<ul class="impx-square-list purple">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ul>
+	    				</div>
+
+	    				<!-- Star List -->
+	    				<div>
+	    					<h6>Star List</h6>
+	    					<ul class="impx-star-list green">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ul>
+	    				</div>
+
+	    				<!-- Check List -->
+	    				<div>
+	    					<h6>Check List</h6>
+	    					<ul class="impx-check-list red">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ul>
+	    				</div>
+
+	    				<!-- Arrow List -->
+	    				<div>
+	    					<h6>Arrow List</h6>
+	    					<ul class="impx-arrow-list blue">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ul>
+	    				</div>
+
+	    				<!-- Plus List -->
+	    				<div>
+	    					<h6>Plus List</h6>
+	    					<ul class="impx-plus-list gold">
+	    						<li>Praesent nibh sit interdum urna </li>
+	    						<li>Amet metus consectetur</li>
+	    						<li>Mattis eget lectus eget </li>
+	    						<li>Nunc volutpat varius quam</li>
+	    					</ul>
+	    				</div>
+	    			</div>
+				</div>
+
+
+				<div data-uk-grid>
+					<!-- Tabs  -->
+                	<div class="uk-width-1-1">
+
+                		<h4 class="uk-heading-line uk-heading-bullet"><span>Tabs</span></h4>
+		                <div class="uk-child-width-1-2@xl uk-child-width-1-2@l uk-child-width-1-2@m uk-child-width-1-1@s" data-uk-grid>
+		    				<div>
+		    					<h6>Top Tabs</h6>
+		    					<ul data-uk-tab>
+								    <li><a href="#">Item</a></li>
+								    <li><a href="#">Item</a></li>
+								    <li><a href="#">Item</a></li>
+								</ul>
+
+								<ul class="uk-switcher"  id="tab-top-content">
+								    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+								    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+								    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+								</ul>
+		    				</div>
+
+		    				<!-- Bottom Tabs -->
+		    				<div>
+		    					<h6>Bottom Tabs</h6>
+		    					<ul class="uk-switcher" id="tab-bottom-content">
+								    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+								    <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+								    <li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, sed do eiusmod.</li>
+								</ul>
+								<ul data-uk-tab="connect: #tab-bottom-content" class="uk-tab-bottom">
+								    <li><a href="#">Item</a></li>
+								    <li><a href="#">Item</a></li>
+								    <li><a href="#">Item</a></li>
+								</ul>
+		    				</div>
+
+		    				<!-- Left Tabs -->
+		    				<div>
+		    					<h6>Left Tabs</h6>
+		    					<div data-uk-grid>
+			    					<div class="uk-width-auto">
+			    						<ul class="uk-tab-left" data-uk-tab="connect: #tab-left-content">
+				                            <li><a href="#">Tab 1</a></li>
+				                            <li><a href="#">Tab 2</a></li>
+				                            <li><a href="#">Tab 3</a></li>
+				                        </ul>
+			    					</div>
+			    					<div class="uk-width-expand">
+			    						<ul id="tab-left-content" class="uk-switcher uk-margin">
+				                            <li>
+				                                <p>Ullamcorper minima veniam quiseti nostrum emmule exercitationem ullam nesti corporis suscipi officess laboriosam nisi aliquid commodi consequatur nonerti reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+				                            </li>
+				                            <li>
+				                                <p>Veritatis et quasi architecto beatae vitae dicta sunt explicabo sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt modi tempora incidunt maxime placeat facere possimus omnis voluptas assumenda.</p>
+				                            </li>
+				                            <li>
+				                                <p>Excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga saepe eveniet voluptate consectetur adipite scinelit vestibulum vel quam sitare amet odio ultricies.</p>
+				                            </li>
+				                        </ul>
+			    					</div>
+		    					</div>
+							</div>
+
+							<!-- Right Tabs -->
+		    				<div>
+		    					<h6>Right Tabs</h6>
+		    					<div data-uk-grid>
+			    					<div class="uk-width-expand">
+			    						<ul id="tab-right-content" class="uk-switcher uk-margin">
+				                            <li>
+				                                <p>Ullamcorper minima veniam quiseti nostrum emmule exercitationem ullam nesti corporis suscipi officess laboriosam nisi aliquid commodi consequatur nonerti reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.</p>
+				                            </li>
+				                            <li>
+				                                <p>Veritatis et quasi architecto beatae vitae dicta sunt explicabo sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt modi tempora incidunt maxime placeat facere possimus omnis voluptas assumenda.</p>
+				                            </li>
+				                            <li>
+				                                <p>Excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga saepe eveniet voluptate consectetur adipite scinelit vestibulum vel quam sitare amet odio ultricies.</p>
+				                            </li>
+				                        </ul>
+			    					</div>
+
+			    					<div class="uk-width-auto">
+			    						<ul class="uk-tab-right" data-uk-tab="connect: #tab-right-content">
+				                            <li><a href="#">Tab 1</a></li>
+				                            <li><a href="#">Tab 2</a></li>
+				                            <li><a href="#">Tab 3</a></li>
+				                        </ul>
+			    					</div>
+		    					</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div data-uk-grid>
+	                <!-- Top Tabs -->
+    				<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-2@s uk-margin-large-bottom">
+    					<h4 class="uk-heading-line uk-heading-bullet"><span>Accordion</span></h4>
+    					<ul data-uk-accordion>
+						    <li class="uk-open">
+						        <a class="uk-accordion-title" href="#">Excepteur sint occaecat ?</a>
+						        <div class="uk-accordion-content">
+						            <img src="{% static 'images/resto-square.jpg' %}" alt="Menu Square" width="140" height="140" class="uk-align-left" />
+                                	<h6 class="uk-margin-remove-top">Image on content</h6>
+                                	<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui facilis blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui offici deserunt mollitia animi.</p>
+						        </div>
+						    </li>
+						    <li>
+						        <a class="uk-accordion-title" href="#">Officia deserunt mollit anim ?</a>
+						        <div class="uk-accordion-content">
+						             <p>Consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est, qui dolorem ipsum quia dolor sit amet omnis voluptas assumenda est</p>
+	                                <ul class="impx-star-list gold">
+	                                    <li>Quis autem iure reprehenderit voluptate molestiae</li>
+	                                    <li>Et harum quidem rerum facilis est et expedita distinctio</li>
+	                                    <li>Temporibus autem quibusdam et aut officiis debitis</li>
+	                                </ul>
+						        </div>
+						    </li>
+						    <li>
+						        <a class="uk-accordion-title" href="#">Inventore veritatis architecto ?</a>
+						        <div class="uk-accordion-content">
+						        	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniamquis .</p>
+                                	<p>Duis aute irure dolor in reprehenderit in voluptate velit qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam.</p>
+						        </div>
+						    </li>
+						</ul>
+    				</div>
+    				
+    				<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-2@s">
+    					<h4 class="uk-heading-line uk-heading-bullet uk-margin-medium-bottom"><span>Alert</span></h4>
+
+    					<div class="uk-card uk-card-default">
+    						<div class="uk-card-body">
+		    					<div class="uk-alert-primary" data-uk-alert>
+								    <a class="uk-alert-close" data-uk-close></a>
+								    <p>Infor Alert!</p>
+								</div>
+
+								<div class="uk-alert-success" data-uk-alert>
+								    <a class="uk-alert-close" data-uk-close></a>
+								    <p>Success Alert!</p>
+								</div>
+
+								<div class="uk-alert-warning" data-uk-alert>
+								    <a class="uk-alert-close" data-uk-close></a>
+								    <p>Warning Alert!</p>
+								</div>
+
+								<div class="uk-alert-danger" data-uk-alert>
+								    <a class="uk-alert-close" data-uk-close></a>
+								    <p>Danger Alert!</p>
+								</div>
+							</div>
+						</div>
+    				</div>
+				</div>
+
+				<div class="uk-grid" data-uk-grid-margin>
+					<!-- Columns  -->
+                	<div class="uk-width-1-1 uk-container-center">
+					    <h4 class="uk-heading-line uk-heading-bullet"><span>Columns</span></h4>
+					    <div class="uk-grid-divider"></div>
+                    </div>
+    				<!-- Full Column  -->
+    				<div class="uk-width-1-1 uk-margin-medium-bottom">
+    					<h5>1/1</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in. Vestibulum vitae libero tristique, tincidunt justo sit amet, vestibulum erat. Duis volutpat suscipit vulputate. Maecenas eget iaculis tortor, eu varius lectus. Quisque eget turpis lectus. Proin consequat accumsan porttitor. Donec porttitor, dolor in lacinia ultricies, ligula turpis fringilla felis, nec sodales dui lorem sed quam. In quis mattis dolor, ut tincidunt ligula. Nullam non sem non neque condimentum mattis. Mauris sagittis sed nisi laoreet consequat. Curabitur at feugiat ligula. Suspendisse et augue lacus.</p>
+    				</div>
+    				<!-- Full Column End -->
+
+    				<!-- 1/2 Column -->
+    				<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s uk-margin-medium-bottom">
+    					<h5>1/2</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in. Vestibulum vitae libero tristique, tincidunt justo sit amet, vestibulum erat. Duis volutpat suscipit vulputate. Maecenas eget iaculis tortor, eu varius lectus. Quisque eget turpis lectus</p>
+    				</div>
+    				<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-1@s uk-margin-medium-bottom">
+    					<h5>1/2</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in. Vestibulum vitae libero tristique, tincidunt justo sit amet, vestibulum erat. Duis volutpat suscipit vulputate. Maecenas eget iaculis tortor, eu varius lectus. Quisque eget turpis lectus</p>
+    				</div>
+    				<!-- 1/2 Column End -->
+
+					<!-- 1/3 Column -->	    				
+    				<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s uk-margin-medium-bottom">
+    					<h5>1/3</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in. Vestibulum vitae libero tristique, tincidunt justo sit amet</p>
+    				</div>
+    				<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s uk-margin-medium-bottom">
+    					<h5>1/3</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in. Vestibulum vitae libero tristique, tincidunt justo sit amet</p>
+    				</div>
+    				<div class="uk-width-1-3@xl uk-width-1-3@l uk-width-1-3@m uk-width-1-1@s uk-margin-medium-bottom">
+    					<h5>1/3</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in. Vestibulum vitae libero tristique, tincidunt justo sit amet</p>
+    				</div>
+    				<!-- 1/3 Column End -->
+
+    				<!-- 1/4 Column -->	    				
+    				<div class="uk-width-1-4@xl uk-width-1-4@l uk-width-1-4@m uk-width-1-4@s uk-margin-medium-bottom">
+    					<h5>1/4</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in</p>
+    				</div>
+    				<div class="uk-width-1-4@xl uk-width-1-4@l uk-width-1-4@m uk-width-1-4@s uk-margin-medium-bottom">
+    					<h5>1/4</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in</p>
+    				</div>
+    				<div class="uk-width-1-4@xl uk-width-1-4@l uk-width-1-4@m uk-width-1-4@s uk-margin-medium-bottom">
+    					<h5>1/4</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in</p>
+    				</div>
+    				<div class="uk-width-1-4@xl uk-width-1-4@l uk-width-1-4@m uk-width-1-4@s uk-margin-medium-bottom">
+    					<h5>1/4</h5>
+    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pellentesque urna leo, vitae posuere dui accumsan in</p>
+    				</div>
+    				<!-- 1/4 Column End -->
+    			</div>
+    		</div>
+		</div>
+		<!-- ELEMENTS -->
+
+		<!-- CONTACT INFO -->
+		<div class="uk-padding bg-img2 uk-position-relative">
+			<div class="impx-overlay dark"></div>
+			<div class="uk-container">
+
+				<div data-uk-grid class="uk-padding-remove-bottom uk-position-relative">				
+					<div class="uk-light uk-width-1-2@xl uk-width-1-2@l uk-width-1-2@m uk-width-1-3@s"><!-- address -->
+						<h5 class="uk-heading-line uk-margin-remove-bottom"><span>Address</span></h5>
+						<p class="impx-text-large uk-margin-top">Jln. Raya Kemerderkaan RI No. 17<br/>Indonesia Raya</p>
+					</div>
+					<div class="uk-light uk-width-1-4@xl uk-width-1-4@l uk-width-1-4@m uk-width-1-3@s"><!-- phone -->
+						<h5 class="uk-heading-line uk-margin-bottom"><span>Phone</span></h5>
+						<p class="impx-text-large uk-margin-remove">+62 123456789<br/>+62 987456123</p>
+					</div>
+					<div class="uk-light uk-width-1-4@xl uk-width-1-4@l uk-width-1-4@m uk-width-1-3@s"><!-- email -->
+						<h5 class="uk-heading-line uk-margin-bottom"><span>Email</span></h5>
+						<a href="mailt:#" class="impx-text-large">cs@sativa-html.com</a><br/>
+						<a href="mailt:#" class="impx-text-large">info@sativa-html.com</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!-- CONTACT INFO END -->
+
+		<!-- FOOTER -->
+		<footer id="impx-footer" class="uk-padding uk-padding-remove-bottom uk-padding-remove-horizontal">
+			<div class="uk-container">
+				<div class="uk-flex uk-flex-center data-uk-grid">
+					<div class="uk-width-1-2@xl uk-width-1-2@l uk-width-2-3@m">
+						<div class="impx-footer-logo uk-align-center uk-text-center">
+							<!-- Footer Logo -->
+							<img src="{% static 'images/logo.png' %}" alt="" class="">
+							<!-- Footer Note -->
+							<p class="uk-margin-bottom">Erit enim mecum, si tecum erit. Re mihi non aeque satisfacit, et quidem locis dissimile homini. Intrandum est igitur in rerum naturam et penitus quid ea postulet.</p>							
+							<!-- Site Copyright -->
+							<p class="impx-copyright"><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Scroll to Top -->
+			<a href="#top" class="to-top fa fa-long-arrow-up" data-uk-scroll></a>
+			<!-- Scroll to Top End -->
+		</footer>
+		<!-- FOOTER END -->
+
+    	<!-- Javascript -->
+		<script src="{% static 'js/jquery.js' %}"></script>
+		{#<script src="{% static 'js/main.js' %}"></script>#}
+		<script src="{% static 'js/uikit.min.js' %}"></script>
+		<script src="{% static 'js/uikit-icons.min.js' %}"></script>
+		<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBGb3xrNtz335X4G2KfoOXb-XuIyHAzlVo"></script>
+		<script src="{% static 'js/jquery.gmap.min.js' %}"></script>
+		<script src="{% static 'js/tiny-date-picker.min.js' %}"></script>
+		<script src="{% static 'js/jquery.parallax.min.js' %}"></script>
+		<script src="{% static 'js/date-config.js' %}"></script>
+		<script src="{% static 'js/template-config.js' %}"></script>
+    </body>
+
+
+</html>

@@ -1,0 +1,43 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Room</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+ 
+</head>
+
+<body>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" name="offer_submit">Add Offer</button>
+        </form>
+
+    </div>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form_menu.as_p }}
+            <button type="submit" name="menu_submit">Add Menu</button>
+        </form>
+
+    </div>
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form_food.as_p }}
+            <button type="submit" name="food_submit">Add Food</button>
+        </form>
+
+    </div>
+    <a href="{% url 'admin-page' %}"><button>Back to admin page</button></a>
+</body>
+
+</html>

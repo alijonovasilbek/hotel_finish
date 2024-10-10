@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Room</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+ 
+</head>
+
+<body>
+
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ spa_service_form.as_p }}
+        <button type="submit" name="spa_service_submit">
+            Submit Spa Service
+        </button>
+    </form>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ spa_pricing_form.as_p }}
+        <button type="submit" name="spa_pricing_submit">
+            Submit Spa Pricing
+        </button>
+    </form>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ therapist_form.as_p }}
+        <button type="submit" name="therapist_submit">
+            Submit Therapist
+        </button>
+    </form>
+    <a href="{% url 'admin-page' %}"><button>Back to admin page</button></a>
+</body>
+</html>

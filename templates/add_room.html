@@ -1,0 +1,143 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Room</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/add.css' %}">
+ 
+</head>
+
+<body>
+    <div class="bg-img">
+        <div class="content">
+            <header>Add a New Room</header>
+
+            {% if messages %}
+            <ul class="error-list">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+            <form class="form_class" method="post">
+                {% csrf_token %}
+        
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="price">Price</label>
+                    </div>
+
+                    <input type="text" id="price" name="price" value="{{ form.price.value }}">
+                </div>
+                
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="room_type">Room Type</label>
+                    </div>
+
+                    <select id="room_type" name="room_type">
+                        {% for value, label in form.room_type.field.choices %}
+                        <option value="{{ value }}" {% if form.room_type.value == value %}selected{% endif %}>{{ label }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="subtitle">Subtitle</label>
+                    </div>
+
+                    <input type="text" id="subtitle" name="subtitle" value="{{ form.subtitle.value }}">
+                </div>
+
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="included_options">Included Options</label>
+                    </div>
+
+                    <textarea id="included_options" name="included_options" class="textarea-small">{{ form.included_options.value }}</textarea>
+                </div>
+
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="included_options1">Included Options 1</label>
+                    </div>
+
+                    <textarea id="included_options1" name="included_options1" class="textarea-small">{{ form.included_options1.value }}</textarea>
+                </div>
+
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="included_options2">Included Options 2</label>
+                    </div>
+
+                    <textarea id="included_options2" name="included_options2" class="textarea-small">{{ form.included_options2.value }}</textarea>
+                </div>
+
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="description">Description</label>
+                    </div>
+
+                    <textarea id="description" name="description" class="textarea-medium">{{ form.description.value }}</textarea>
+                </div>
+
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="additional_description">Additional Description</label>
+                    </div>
+
+                    <textarea id="additional_description" name="additional_description" class="textarea-medium">{{ form.additional_description.value }}</textarea>
+                </div>
+
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="more_facilities">More Facilities</label>
+                    </div>
+
+                    <textarea id="more_facilities" name="more_facilities" class="textarea-medium">{{ form.more_facilities.value }}</textarea>
+                </div>
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="more_facilities">More Facilities1</label>
+                    </div>
+
+                    <textarea id="more_facilities" name="more_facilities1" class="textarea-medium">{{ form.more_facilities.value }}</textarea>
+                </div>
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="more_facilities">More Facilities2</label>
+                    </div>
+
+                    <textarea id="more_facilities" name="more_facilities2" class="textarea-medium">{{ form.more_facilities.value }}</textarea>
+                </div>
+                <div class="field">
+                    <div class="div-margin">
+                        <label for="more_facilities">More Facilities3</label>
+                    </div>
+
+                    <textarea id="more_facilities" name="more_facilities3" class="textarea-medium">{{ form.more_facilities.value }}</textarea>
+                </div>
+
+                
+
+                <div class="field">
+                    <input type="submit" value="Add Room">
+                </div>
+            </form>
+
+        </div>
+        <div class="pass">
+            <a href="{% url 'rooms1' %}">Back to Room List</a>
+        </div>
+    </div>
+    <a href="{% url 'admin-page' %}"><button>Back to admin page</button></a>
+</body>
+
+</html>
